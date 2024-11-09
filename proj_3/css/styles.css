@@ -1,0 +1,234 @@
+/*
+    Order of selectors
+    1. Body
+    2. Type
+    3. Type (for structure)
+    4. id
+    5. class
+*/
+
+/*
+    Font import
+*/
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap');
+
+/* ==========================
+   Body
+   ========================== */
+
+   body {
+    font-family: 'Roboto', Arial, sans-serif; /* Main Google Font with fallback web-safe fonts */
+    display: grid;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    background-image: url("/images/armenia_flag.png");
+    background-size: cover;
+    background-position: center;
+}
+
+ 
+/* ==========================
+   Type
+   ========================== */
+
+p {
+    max-width: 60ch;
+    height: auto;
+    font-size: 15;
+    color: #FFFFFF; /* white */
+}
+
+/* Unvisited link */
+a:link {
+    color: #D90012; /* Red (Armenian flag color) */
+    text-decoration: none; /* Removes underline for unvisited links */
+}
+
+/* Visited link */
+a:visited {
+    color: #a600d9; /* Blue (Armenian flag color) */
+    text-decoration: underline; /* Adds an underline to indicate it was visited */
+}
+
+/* Hovered link */
+a:hover {
+    color: #D90012; /* Orange (Armenian flag color) */
+    text-decoration: underline; /* Adds underline on hover for visual feedback */
+}
+
+
+/* Active link (being clicked) */
+a:active {
+    color: #D90012; /* Red (Armenian flag color) */
+    text-decoration: none; /* No underline when active */
+}
+
+
+
+
+/* ==========================
+   Type for Structure
+   ========================== */
+
+header {
+    width: auto;
+    justify-content: left;
+    text-align: center;
+    height: auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    justify-content: center;
+    text-align: center;
+    height: auto;
+}
+
+section {
+    height: auto;
+    width: auto;
+    margin-bottom: 20%;
+}
+
+section > div {
+    border-style: solid;
+    border-radius: 10%;
+    margin: 5% auto;
+} 
+
+
+article {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+}
+
+footer {
+    background-color: #0033A0; /* Blue color from the Armenian flag */
+    padding: 20px;
+    text-align: center;
+    border: 3px solid #000000; /* Black border */
+    border-radius: 10%; /* Slight rounding of corners for a polished look */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    margin-top: 100px;
+    background-size: cover;
+    background-position: center;
+}
+
+footer h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+footer ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 10px 0;
+}
+
+footer ul li {
+    margin: 5px 0; /* Space between list items */
+}
+
+
+/*
+    Classes
+*/
+
+h1, h2, h3, .heading-text {
+    font-family: 'Lora', Georgia, serif; /* Second Google Font with fallback web-safe fonts */
+    color: #FFFFFF; /* white */
+
+}
+
+.content_images {
+    height: 200px;
+    width: 80%;
+    border-style: solid;
+    border-radius: 20%;
+}
+
+.table_container {
+    color: #FFFFFF; /* white */
+    display: flex;
+    justify-content: center;
+    border-radius: 25%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 0;
+}
+
+.text_container {
+    width: auto;;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/*
+    Section id's
+*/
+
+#description_of_aremenia {
+    background-color: #D90012;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    margin-bottom: 60%;
+    /*
+        Should have its own height and width
+    */
+}
+
+#people_and_society {
+    background-color: #0033A0;
+    width: 600px;
+    height: auto;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40%;
+    /*
+        Needs own height and based on statistical layout
+        and content descriptions. 
+        This is why it will be a class
+    */
+}
+
+#geography_of_armenia {
+    background-color: #F2A800;
+    height: auto;
+    width: 600px;
+}
+
+/* Navigation Bar Styles */
+#main-nav {
+    background-color: #0033A0; /* Blue color from Armenian flag */
+    padding: 10px 20px;
+    border: 3px solid #000000;
+    border-radius: 30px;
+    text-align: center;
+    margin: 5%;
+}
+
+#main-nav ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+}
+
+#main-nav ul li {
+
+    margin: 0 15px; /* Space between navigation items */
+
+}
+
