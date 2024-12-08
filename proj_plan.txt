@@ -1,0 +1,29 @@
+Step 1:
+    Create proper grid for landing and portofolio page 
+    ----------------------------------------------------
+    DONE
+Step 2:
+    Create proper sub dimensions for information that will be in grid 
+    for landing page and portofolio page
+Step 3:
+    Gather images and descriptions Done
+Step 4:
+    Input images and descriptions Done
+Step 5:
+    Create links between pages  done
+    Choose Good font stack done
+Step 6:
+    Edit link states done
+    Import font stack done
+Step 7:
+    Test html done
+    Test Css
+    Check site weight done
+    Refactor code to follow project guidelines 
+
+
+Step 8:
+    Register a domain
+Step 9: 
+    Push site to github and host
+    

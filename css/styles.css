@@ -3,232 +3,597 @@
     1. Body
     2. Type
     3. Type (for structure)
-    4. id
+    4. id -- 
     5. class
+
+    REFACTOR ID AND CLASS
 */
 
-/*
-    Font import
-*/
+/*Types modifications-----------------------------------------------------------*/
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-/* ==========================
-   Body
-   ========================== */
-
-   body {
-    font-family: 'Roboto', Arial, sans-serif; /* Main Google Font with fallback web-safe fonts */
-    display: grid;
-    grid-template-rows: auto auto auto;
-    justify-content: center;
-    height: auto;
-    width: auto;
-    background-image: url("/images/armenia_flag.png");
-    background-size: cover;
-    background-position: center;
-}
-
- 
-/* ==========================
-   Type
-   ========================== */
-
-p {
-    max-width: 60ch;
-    height: auto;
-    font-size: 15;
-    color: #FFFFFF; /* white */
-}
-
-/* Unvisited link */
-a:link {
-    color: #D90012; /* Red (Armenian flag color) */
-    text-decoration: none; /* Removes underline for unvisited links */
-}
-
-/* Visited link */
-a:visited {
-    color: #a600d9; /* Blue (Armenian flag color) */
-    text-decoration: underline; /* Adds an underline to indicate it was visited */
-}
-
-/* Hovered link */
-a:hover {
-    color: #D90012; /* Orange (Armenian flag color) */
-    text-decoration: underline; /* Adds underline on hover for visual feedback */
-}
-
-
-/* Active link (being clicked) */
-a:active {
-    color: #D90012; /* Red (Armenian flag color) */
-    text-decoration: none; /* No underline when active */
-}
-
-
-
-
-/* ==========================
-   Type for Structure
-   ========================== */
 
 header {
-    width: auto;
-    justify-content: left;
     text-align: center;
-    height: auto;
+    background-color: #2D3748;
+    border-radius: 10px;
+    color: #F5F5F5;
+
+    font-size: 15px;
+    margin: 0;
 }
 
-img {
-    width: 100%;
-    height: 100%;
-}
-
-main {
-    justify-content: center;
-    text-align: center;
-    height: auto;
-}
-
-section {
-    height: auto;
-    width: auto;
-    margin-bottom: 20%;
-}
-
-section > div {
-    border-style: solid;
-    border-radius: 10%;
-    margin: 5% auto;
-} 
-
-
-article {
-    display: grid;
-    grid-template-rows: auto auto auto;
-    justify-content: center;
-}
 
 footer {
-    background-color: #0033A0; /* Blue color from the Armenian flag */
-    padding: 20px;
     text-align: center;
-    border: 3px solid #000000; /* Black border */
-    border-radius: 10%; /* Slight rounding of corners for a polished look */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-    margin-top: 100px;
-    background-size: cover;
-    background-position: center;
+    height: 70px;  
+    background-color: #2D3748;
+    color: #F5F5F5;
+
+
+    border-radius: 10px;
+
+    font-size: 15px;
 }
 
-footer h1 {
-    font-size: 22px;
-    margin-bottom: 15px;
+h4{
+    color: #F5F5F5;
+
 }
 
-footer ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0;
-    margin: 10px 0;
+h3{
+
+    color: #F5F5F5;
 }
 
-footer ul li {
-    margin: 5px 0; /* Space between list items */
+h2{
+
+    color: #F5F5F5;
+
 }
 
+li{
+    color: #F5F5F5;
+}
+
+
+
+p{
+    max-width: 60ch;
+    color: #E2E8F0;
+    margin: auto;
+
+}
+
+a:link{
+
+    color: #FFD700;
+
+}
+
+a:visited{
+
+    color: #B8860B
+
+}
+
+a:hover{
+
+    color: #FF4500
+
+}
+
+a:active{
+
+    color: #FFFFFF
+
+}
+
+
+
+
+/*-----------------------------------------------------------------------------*/
+
+/*Landing Page------------------------------------------------------------------*/
 
 /*
-    Classes
+    For grid layout make a number of divs that structure the site 
+    how you picture it. 
+    
+    4 rows
+    3rd row will have 3 columns
+
 */
 
-h1, h2, h3, .heading-text {
-    font-family: 'Lora', Georgia, serif; /* Second Google Font with fallback web-safe fonts */
-    color: #FFFFFF; /* white */
+/*Landing page ids*/
+
+/*Add title to article*/
+
+#landing_body {
+
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+
+
+    background-color: #1A202C;
+
+    display: grid;
+    
+
+    gap: 30px;
+
+    grid-template-areas: 
+        "header"
+        "about"
+        "description"
+        "footer";
+    justify-content: center;
+    text-align: center;
 
 }
 
-.content_images {
+#about{
+    
+    background-color: #2D3748;
+    grid-area: about;
+    display: grid;
+    grid-template-areas: "about_title" "profile";
+    border-radius: 10px;
+    margin: auto;
+    justify-content: center;
+ }
+
+#about_title{grid-area: about_title;}
+
+#profile{
+    
+    background-color: #2D3748;
+    grid-area: profile;
+    width: 500px;
+    display: grid;
+    margin-bottom:50px;
+    height: 900px;
+    
+
+    border-radius: 10px;
+    text-align: center;
+    grid-template-areas: 
+        
+        "profile_img"
+        "contact_info"
+        "about_me"
+
+}
+
+#profile_img{grid-area: profile_img;}
+
+#contact_info{
+    grid-area: contact_info;
+    display: grid;
+    grid-template-areas: 
+    "contact_title contact_title contact_title"
+    "email github linkedin";
+
+}
+
+#contact_title{grid-area: contact_title;}
+#email{grid-area: email;}
+#github{grid-area: github;}
+#linkedin{grid-area: linkedin;}
+
+#about_me{grid-area: about_me;}
+
+/*-----------------------------------------------------------------------------*/
+
+/*Education Skills and interests*/
+
+/*Add title for article*/
+
+#description{
+    
+    grid-area: description;
+    display: grid;
+    grid-template-areas: "education skills interests";
+    gap: 20px;
+    margin: 30px;
+    width: 100%;
+    align-items: start;
+    
+
+}
+
+/*Education*/
+
+#education{
+    background-color: #2D3748;
+    grid-area: education;
+    display: grid;
+    grid-template-areas: "edu_title" "school" "coursework_degree";
+
+    border-radius: 10px;
+
+    height: auto;    
+  
+    
+
+}
+
+#edu_title{grid-area: edu_title;
+    height: auto;}
+#school{grid-area: school;}
+#coursework_degree{grid-area: coursework_degree;}
+
+/*Skills*/
+
+#skills{
+
+    row-gap: 30px;
+    grid-area: skills;
+    display: grid;
+    grid-template-areas: "programming_langs packages";
+    
+    
+}
+
+#programming_langs{
+
+    background-color: #2D3748;
+
+    grid-area: programming_langs;
+    grid-template-areas: "lang_title" "languages";
+
+
+    margin-right: 50px;
+    margin-left: 50px;
+
+    border-radius: 10px;
+    
+}
+
+#lang_title{ grid-area: lang_title;}
+
+
+#languages{
+
+    grid-area: languages;
+    display: grid;
+    grid-template-areas: 
+        "r_studio python sql"
+        "java c javascript"
+        "html css bash";
+    height: auto;
+}
+
+#r_studio{grid-area: r_studio;}
+#python{grid-area: python;}
+#sql{grid-area: sql; }
+#java{grid-area: java;}
+#c {grid-area: c;}
+#javascript {grid-area: javascript;}
+#html {grid-area: html;}
+#css {grid-area: css;}
+#bash {grid-area: bash;}
+
+/*Packages*/
+
+#packages{
+    background-color: #2D3748;
+    display: grid;
+    grid-template-areas: 
+        "package_title" "frameworks";
+
+    margin-right: 50px;
+    margin-left: 50px;
+    
+    border-radius: 10px;
+
+}
+
+#package_title{
+    grid-area: package_title;
+    
+}
+
+#frameworks{
+
+    grid-area: frameworks;
+    padding: 10px;
+    display: grid;
+    grid-template-areas: 
+        "pandas numpy"
+        "matplotlib react";
+    align-items: start;
+}
+
+#pandas{ grid-area: pandas;}
+#numpy{grid-area: numpy}
+#matplotlib{ grid-area: matplotlib;}
+#react{grid-area: react;}
+
+/*Interests*/
+
+#interests{
+    background-color: #2D3748;
+    display: grid;
+    grid-template-areas: 
+    "interest_title interest_title interest_title" 
+    "data_analysis bitcoin finance" 
+    "math politics programming";
+    border-radius: 10px;
+
+    height: auto;
+
+    font-size: 15px;
+}
+
+#interest_title{grid-area: interest_title;}
+#data_analysis{grid-area: data_analysis;}
+#bitcoin{grid-area: bitcoin;}
+#finance{grid-area: finance;}
+#math{grid-area: math;}
+#politics{grid-area: politics;}
+#programming{grid-area: programming;}
+
+
+.img_container{
+    padding-top: 10px;
+    justify-content: center;
+    margin:auto
+    
+}
+
+/*For 3rd party links to other site, better for design*/
+.profile_icon_container{
+
+    display: grid;
+    grid-template-areas: "prog_icon" "icon_name";
+
+}
+
+
+.icon_container{
+
+    display: grid;
+    grid-template-areas: "icon_name" "prog_icon";
+
+}
+
+.icon_name{
+
+    grid-area: icon_name;
+    text-align: center;
+    font-size: 10px;
+
+}
+
+.icon_wrapper{
+
+    grid-area: prog_icon;
+    padding-top: 10px;
+    justify-content: center;
+
+}
+
+.icon{
+
+    
+    height: 60px;
+    width: 60px;
+
+}
+
+.title{
+
+
+    text-align: center;
+    font-size: 15px;
+
+}
+
+
+
+.profile_photo{
+
+    border-radius: 10%;
+    height: 300px;
+    width: 300px;
+
+}
+
+/*This should be an id*/
+
+.school_photo{
+
+    border-radius: 10px;
     height: 200px;
-    width: 80%;
-    border-style: solid;
-    border-radius: 20%;
+
 }
 
-.table_container {
-    color: #FFFFFF; /* white */
-    display: flex;
+/*-----------------------------------------------------------------------------*/
+
+/*Portfolio -------------------------------------------------------------------*/
+
+/*Counterfeit Identifier*/
+
+#counterfeit_indentifier{
+    
+    background-color: #2D3748;
+    grid-area: proja;
+    display: grid;
+    grid-template-areas: "ci_title" "ci_img" "ci_description" "ci_stack";
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
     justify-content: center;
-    border-radius: 25%;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-bottom: 0;
-}
-
-.text_container {
-    width: auto;;
-    height: auto;
-    display: flex;
-    justify-content: center;
-}
-
-/*
-    Section id's
-*/
-
-#description_of_aremenia {
-    background-color: #D90012;
-    width: auto;
-    height: auto;
-    justify-content: center;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-    margin-bottom: 60%;
-    /*
-        Should have its own height and width
-    */
-}
-
-#people_and_society {
-    background-color: #0033A0;
-    width: 600px;
-    height: auto;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-    margin-bottom: 40%;
-    /*
-        Needs own height and based on statistical layout
-        and content descriptions. 
-        This is why it will be a class
-    */
-}
-
-#geography_of_armenia {
-    background-color: #F2A800;
-    height: auto;
-    width: 600px;
-}
-
-/* Navigation Bar Styles */
-#main-nav {
-    background-color: #0033A0; /* Blue color from Armenian flag */
-    padding: 10px 20px;
-    border: 3px solid #000000;
-    border-radius: 30px;
     text-align: center;
-    margin: 5%;
-}
 
-#main-nav ul {
-    list-style-type: none; /* Remove bullets */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Center items horizontally */
-}
+    row-gap: 20px;
 
-#main-nav ul li {
-
-    margin: 0 15px; /* Space between navigation items */
 
 }
+
+#ci_title{grid-area: ci_title;}
+
+#ci_img{
+    grid-area: ci_img;
+    margin: auto;
+}
+
+#ci_description{grid-area: ci_description;}
+
+#ci_stack{ 
+    grid-area: ci_stack;
+    display: grid;
+    grid-template-areas: 
+        "stack_ci stack_ci stack_ci"
+        "ci_pandas ci_numpy ci_matplotlib";
+}
+
+#stack_ci{grid-area: stack_ci;}
+
+#ci_pandas{grid-area: ci_pandas;}
+#ci_numpy{grid-area: ci_numpy;}
+#ci_matplotlib{grid-area: ci_matplotlib;}
+
+/*Pokedex*/
+
+#pokedex{
+
+    background-color: #2D3748;
+    grid-area: projb;
+    display: grid;
+    grid-template-areas: "p_title" "p_img" "p_description" "p_stack";
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    
+
+
+}
+
+#p_title{grid-area: p_title;}
+#p_img{grid-area: p_img;
+    margin: auto;
+}
+
+#p_description{grid-area: p_description;}
+
+#p_stack{ 
+    grid-area: p_stack;
+    display: grid;
+    grid-template-areas: 
+        "stack_dex stack_dex"
+        "dex_python dex_js";
+
+}
+
+#stack_dex{grid-area: stack_dex;}
+#dex_python{grid-area: dex_python;}
+#dex_js{grid-area: dex_js;}
+
+
+/*Portfolio classes*/
+
+.portfolio_body{
+    
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    
+    background-color: #1A202C;
+
+    display: grid;
+    
+    margin:10px;
+    row-gap: 30px;
+    
+    grid-template-areas: 
+        "header"
+        "projects"
+        "footer";
+    
+    justify-content: center;
+    margin: 30px;
+
+}
+
+
+.projects{
+
+    
+    grid-area: projects;
+
+
+    display: grid;
+    grid-template-areas: 
+        "proja" "projb"; /*Separate quotations determine rows spaces cols*/
+
+    justify-content: center;
+    
+
+}
+
+
+.portfolio_img_container{
+
+    padding-top: 10px;
+    justify-content: center;
+    max-height: 900px;
+    max-width: 700px;
+    
+    
+    
+
+}
+
+.portfolio_img{
+
+    max-width: 100%;
+    height: 100%;
+
+}
+
+/*Resume*/ 
+
+/*-------------------------------------------------------------------------------*/
+
+/*Resume file ------------------------------------------------------------------*/
+
+
+/*Make this and id*/
+
+.resume_body{
+
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+
+    background-color: #1A202C;
+
+
+
+    display: grid;
+    grid-template-areas: "header" "resume" "footer";
+    margin: auto;
+    
+
+    display: grid;
+    
+    margin:10px;
+    row-gap: 20px;
+
+}
+
+
+#resume{
+
+    grid-area: resume;
+    height: 1300px;
+    width: 100%;
+    
+    
+}
+
+/*Make this and id*/
+
+/*------------------------------------------------------------------------------*/
 
